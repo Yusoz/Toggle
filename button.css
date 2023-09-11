@@ -1,0 +1,51 @@
+body{
+    background-color: #1e1e1e;
+    background-image: url("pics/ico.jpg");
+}
+.wrap{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+.switch{
+    -webkit-appearance: none;
+}
+label{
+    height: 50px;
+    width: 100px;
+    background: red;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    box-shadow: 0 0 5px floralwhite ;
+}
+label::before{
+    content: "";
+    background-color: #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: 0 0 0 5px;
+    box-shadow: 0 0 5px rgba(
+        255,255,255,.8
+    ),
+    0 0 15px rgba(
+             255,255,255,.8
+        );
+        transition: .6s ease-in-out;
+    }
+.switch:checked +label{
+        background-color: yellow;
+}
+.switch:checked +label::before{
+        margin-left: 55px;
+        box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+    
